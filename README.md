@@ -4,7 +4,7 @@
 
 void findPythagoreanTriples(int n) {
     for (int a = 1; a <= n; a++) {
-        for (int b = a; b <= n; b++) { // Починаємо з a, щоб уникнути дублювання
+        for (int b = a; b <= n; b++) { 
             int cSquared = a*a + b*b;
             int c = std::sqrt(cSquared);
             if (c * c == cSquared && c <= n) {
@@ -31,7 +31,7 @@ void pascalTriangle(int n) {
 
     for (int i = 0; i < n; i++) {
         triangle[i].resize(i + 1);
-        triangle[i][0] = triangle[i][i] = 1;  // Краї трикутника
+        triangle[i][0] = triangle[i][i] = 1;  
 
         for (int j = 1; j < i; j++) {
             triangle[i][j] = triangle[i-1][j-1] + triangle[i-1][j];
